@@ -76,7 +76,7 @@ const actions = {
     }
 
     return ApiService
-      .put('user', user)
+      .put('user', {user})
       .then(({data}) => {
         context.commit(SET_AUTH, data.user)
         return data
