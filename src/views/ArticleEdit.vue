@@ -4,28 +4,31 @@
       <div class="row">
         <div class="col-md-10 offset-md-1 col-xs-12">
           <RwvListErrors :errors="errors"/>
-          <form v-on:submit.prevent="onPublish(article.slug, article)">
+          <form v-on:submit.prevent="onPublish(article.slug, article)" data-cy="article-form">
             <fieldset :disabled="inProgress">
               <fieldset class="form-group">
                 <input
                   type="text"
                   class="form-control form-control-lg"
                   v-model="article.title"
-                  placeholder="Article Title">
+                  placeholder="Article Title"
+                  data-cy="article-title">
               </fieldset>
               <fieldset class="form-group">
                 <input
                   type="text"
                   class="form-control"
                   v-model="article.description"
-                  placeholder="What's this article about?">
+                  placeholder="What's this article about?"
+                  data-cy="article-description">
               </fieldset>
               <fieldset class="form-group">
                 <textarea
                   class="form-control"
                   rows="8"
                   v-model="article.body"
-                  placeholder="Write your article (in markdown)">
+                  placeholder="Write your article (in markdown)"
+                  data-cy="article-body">
                 </textarea>
               </fieldset>
               <fieldset class="form-group">
@@ -34,15 +37,18 @@
                   class="form-control"
                   placeholder="Enter tags"
                   v-model="tagInput"
-                  v-on:keypress.enter.prevent="addTag(tagInput)">
+                  v-on:keypress.enter.prevent="addTag(tagInput)"
+                  data-cy="article-tags-input">
                 <div class="tag-list">
                   <span
                     class="tag-default tag-pill"
                     v-for="(tag, index) of article.tagList"
-                    :key="tag + index">
+                    :key="tag + index"
+                    data-cy="article-tags">
                   <i
                     class="ion-close-round"
-                    v-on:click="removeTag(tag)">
+                    v-on:click="removeTag(tag)"
+                    data-cy="article-tag-remove">
                 </i>
                 {{ tag }}
               </span>

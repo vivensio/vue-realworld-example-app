@@ -7,7 +7,7 @@
     <router-link
       :to="{name: 'article', params: {'slug': article.slug}}"
       class="preview-link">
-      <h1>{{article.title}}</h1>
+      <h1 data-cy="article-title">{{article.title}}</h1>
       <p>{{article.description}}</p>
       <span>Read more...</span>
       <ul class="tag-list">

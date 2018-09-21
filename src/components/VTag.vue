@@ -1,5 +1,9 @@
 <template>
-  <router-link :to="{ name: 'home-tag', params: { tag: name } }" :class="className">
+  <router-link
+    :to="{ name: 'home-tag', params: { tag: name } }"
+    :class="className"
+    data-cy="article-tag"
+  >
     {{ name }}
   </router-link>
 </template>

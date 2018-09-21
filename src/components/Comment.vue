@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-block">
-      <p class="card-text">
+      <p class="card-text" data-cy="comment-body">
         {{ comment.body }}
       </p>
     </div>
