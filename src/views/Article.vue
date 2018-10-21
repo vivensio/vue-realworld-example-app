@@ -2,7 +2,7 @@
   <div class="article-page">
     <div class="banner">
       <div class="container">
-        <h1>{{ article.title }}</h1>
+        <h1 data-cy="article-title">{{ article.title }}</h1>
         <RwvArticleMeta
           :article="article"
           :actions="true"
@@ -12,7 +12,7 @@
     <div class="container page">
       <div class="row article-content">
         <div class="col-xs-12">
-          <div v-html="parseMarkdown(article.body)"></div>
+          <div v-html="parseMarkdown(article.body)" data-cy="article-body"></div>
           <ul class="tag-list">
             <li
               v-for="(tag, index) of article.tagList"

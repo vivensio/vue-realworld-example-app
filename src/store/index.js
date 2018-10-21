@@ -8,7 +8,7 @@ import profile from './profile.module'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   modules: {
     home,
     auth,
@@ -16,3 +16,7 @@ export default new Vuex.Store({
     profile
   }
 })
+
+window.__store__ = store
+
+export default store

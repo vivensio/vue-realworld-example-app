@@ -3,8 +3,8 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-xs-12">
-          <h1 class="text-xs-center">Your Settings</h1>
-          <form @submit.prevent="updateSettings()">
+          <h1 class="text-xs-center" data-cy="settings-heading">Your Settings</h1>
+          <form @submit.prevent="updateSettings()" data-cy="settings-form">
             <fieldset>
               <fieldset class="form-group">
                 <input class="form-control" type="text"
@@ -19,7 +19,8 @@
               <fieldset class="form-group">
                 <textarea class="form-control form-control-lg" rows="8"
                   v-model="currentUser.bio"
-                  placeholder="Short bio about you"></textarea>
+                  placeholder="Short bio about you"
+                  data-cy="settings-bio"></textarea>
               </fieldset>
               <fieldset class="form-group">
                 <input class="form-control form-control-lg" type="text"

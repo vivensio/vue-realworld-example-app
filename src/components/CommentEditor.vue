@@ -9,12 +9,13 @@
           class="form-control"
           v-model="comment"
           placeholder="Write a comment..."
-          rows="3">
+          rows="3"
+          data-cy="comment-textbox">
         </textarea>
       </div>
       <div class="card-footer">
         <img :src="userImage" class="comment-author-img" />
-        <button class="btn btn-sm btn-primary"> Post Comment </button>
+        <button class="btn btn-sm btn-primary" data-cy="post-comment-btn"> Post Comment </button>
       </div>
     </form>
   </div>

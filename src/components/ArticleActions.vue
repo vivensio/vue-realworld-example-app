@@ -9,7 +9,8 @@
     &nbsp;&nbsp;
     <button
       class="btn btn-outline-danger btn-sm"
-      v-on:click="deleteArticle(article.slug)">
+      v-on:click="deleteArticle(article.slug)"
+      data-cy="article-delete-btn">
       <i class="ion-trash-a"></i>&nbsp;Delete Article
     </button>
   </span>
@@ -29,14 +30,15 @@
       :class="{
         'btn-primary': article.favorited,
         'btn-outline-primary': !article.favorited
-      }">
+      }"
+      data-cy="fav-unfav-btn">
       <i class="ion-heart"></i>&nbsp;
       {{
         article.favorited
         ? 'Unfavorite Article'
         : 'Favorite Article'
       }}
-      <span class="counter">
+      <span class="counter" data-cy="fav-counter">
         ({{article.favoritesCount}})
       </span>
     </button>
