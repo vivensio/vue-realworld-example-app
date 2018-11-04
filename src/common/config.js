@@ -1,2 +1,4 @@
 export default {}
-export const API_URL = 'http://localhost:3000/api'
+const PORT = window.Cypress ? '3001' : '3000'
+
+export const API_URL = `http://localhost:${PORT}/api`
